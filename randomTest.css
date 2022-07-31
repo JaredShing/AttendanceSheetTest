@@ -1,0 +1,18 @@
+table
+{
+	border-collapse:  collapse;
+	border:  5px;
+	border-radius:  5px;
+	/*
+	margin-right:	auto;
+	margin-left:	auto;
+	*/
+}
+
+textarea
+{
+	overflow:  none;
+	resize:  none;
+	width:  600px;
+	height:  35px;
+}
