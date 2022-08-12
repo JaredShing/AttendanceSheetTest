@@ -1,13 +1,67 @@
+html
+{
+	background-color:  rgb(168, 168, 168);
+	/*
+		rgb(117, 117, 117)
+		rgb(255, 255, 255)
+		rgb(58, 66, 66)
+		rgb(64, 64, 64)
+		rgb(131, 145, 138);
+		rgb(114, 161, 151);
+	*/
+}
+
+h1
+{
+	font-size: 30px;
+	font-family:  Georgia, sans-serif;
+	color:  rgb(0, 0, 0);
+}
+
+h2
+{
+	font-family:  Georgia, sans-serif;
+	color:  rgb(0, 0, 0);
+}
+
 table
 {
 	border-collapse:  collapse;
-	border:  5px;
-	border-radius:  5px;
+	border-radius:  10px 10px 0 0;
+	overflow:  hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 	/*
-	margin-right:	auto;
-	margin-left:	auto;
+	border:  solid gray 1.5px;
+	border-radius:  5px;
 	*/
+	text-align:  center;
+	margin-left:  auto;
+	margin-right:  auto;
+
+	background-color:  rgb(255, 255, 255);
 }
+
+thead
+{
+	background-color: rgb(255, 168, 38);
+}
+
+tr
+{
+	border-bottom:  1px solid rgb(217, 217, 217);
+}
+
+tr:last-of-type
+{
+	border-bottom:  2px solid rgb(255, 168, 38);
+}
+
+/*
+.nameRow
+{
+	border-right:  1px solid rgb(217, 217, 217);;
+}
+*/
 
 textarea
 {
@@ -15,4 +69,42 @@ textarea
 	resize:  none;
 	width:  600px;
 	height:  35px;
+	background-color:  rgb(237, 237, 237);
+	border-radius:  5px;
+}
+
+.pieceButton
+{
+	font-size:  12px;
+	font-family:  Helvetica, sans-serif;
+	padding:  0.5em 1em;
+	color:  rgb(255, 255, 255);
+	background:  rgb(255, 133, 233);
+	border-radius:  0.5em;
+	border:  0.1em solid lightgray;
+	outline:  0.2em;
+}
+
+.pieceClicked
+{
+	background:  rgb(255, 31, 214);
+}
+
+#submitButton
+{
+	font-size:  12px;
+	font-family:  Helvetica, sans-serif;
+	padding:  0.5em 1em;
+	margin:  0.25em;
+	border-radius:  3em;
+	border:  none;
+	outline:  none;
+	color:  rgb(255, 255, 255);
+	background:  rgb(10, 134, 242);
+	cursor:  pointer;
+}
+
+#submitButton:hover
+{
+	background:  rgb(10, 112, 201);
 }

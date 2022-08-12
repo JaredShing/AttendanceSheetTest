@@ -100,7 +100,7 @@ let generateTable = function(value)
 	let newDiv = $("<div>", {"class": className});
 	let newH2 = $("<h2>", {"class": className});
 	newH2.append("Piece " + (value + 1));
-	let newTable = $("<table>", {"class": className, "id": "Table" + (value + 1), "border": "1"});
+	let newTable = $("<table>", {"class": className, "id": "Table" + (value + 1)});//, "border": "1"});
 	
 
 	newTable.append(generateTableHeader());
@@ -118,11 +118,11 @@ let generateTableHeader = function()
 	let newTableHead = $("<thead>");
 	let newTableRow = $("<tr>");
 
-	let nameHeader = $("<th>", {"align": "center", "width": "300"});
+	let nameHeader = $("<th>", {"class": "name nameHead", "align": "center", "width": "300"});
 	nameHeader.append("Name:");
-	let attendanceHeader = $("<th>", {"align": "center", "width": "100"});
+	let attendanceHeader = $("<th>", {"class": "attendance attendanceHead", "align": "center", "width": "100"});
 	attendanceHeader.append("Attendance:");
-	let noteHeader = $("<th>", {"align": "center", "width": "500"});
+	let noteHeader = $("<th>", {"class": "attendance attendanceNote", "align": "center", "width": "500"});
 	noteHeader.append("Note:");
 
 	newTableRow.append(nameHeader);
@@ -138,7 +138,7 @@ let generateTableBody = function(value)
 	for (var i = 0; i < allPieces[value].length; i++)
 	{
 		let newTableRow = $("<tr>");
-		let name = $("<td>");
+		let name = $("<td>", {"class": "name nameRow"});
 		name.append(allPieces[value][i].name);
 		let attendanceCheck = $("<td>");
 		let checkBox = $("<input>", {"type": "checkbox", "class": "attendance", "id": helperAttendId(value, i)});
@@ -292,5 +292,9 @@ $(function()
 		document.getElementById("piece3Button").addEventListener("click", e => {clickButton(2)});
 		document.getElementById("piece2Button").addEventListener("click", e => {clickButton(1)});
 		document.getElementById("piece1Button").addEventListener("click", e => {clickButton(0)});
+		document.querySelectorAll(".pieceButton").forEach(pill => 
+		{
+			pill.addEventListener("click", () => pill.classList.toggle("pieceClicked"))
+		});
 	}
 )
